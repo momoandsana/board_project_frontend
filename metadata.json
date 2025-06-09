@@ -1,0 +1,5 @@
+{
+  "name": "CommunityHub",
+  "description": "A community platform for discussions, announcements, and engagement, featuring user authentication, boards, posts, and comments.",
+  "requestFramePermissions": []
+}
