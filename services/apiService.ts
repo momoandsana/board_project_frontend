@@ -1,4 +1,3 @@
-
 import axios, { AxiosError } from 'axios';
 import { API_BASE_URL } from '../constants';
 import { User, PostSummary, PostDetail, Comment, AdminUser, ApiErrorDetail, BoardType } from '../types';
@@ -7,11 +6,9 @@ const apiClient = axios.create({
   baseURL: API_BASE_URL,
 });
 
-// Utility to handle API errors
 const handleError = (error: AxiosError<ApiErrorDetail>): Promise<never> => {
   if (error.response) {
     console.error('API Error:', error.response.status, error.response.data);
-    // Try to extract a meaningful message
     let message = `Error: ${error.response.status}`;
     if (error.response.data?.detail) {
       if (typeof error.response.data.detail === 'string') {
@@ -22,7 +19,6 @@ const handleError = (error: AxiosError<ApiErrorDetail>): Promise<never> => {
         message = JSON.stringify(error.response.data.detail);
       }
     }
-    // Throw an error object that includes the response for further handling if needed
     return Promise.reject({ ...error, message }); 
   } else if (error.request) {
     console.error('Network Error:', error.request);
@@ -32,7 +28,6 @@ const handleError = (error: AxiosError<ApiErrorDetail>): Promise<never> => {
     return Promise.reject({ ...error, message: error.message });
   }
 };
-
 
 // --- User API ---
 const signup = async (username: string, password: string): Promise<{ success: boolean; username: string }> => {
@@ -132,7 +127,6 @@ const getPosts = async (board: BoardType): Promise<PostSummary[]> => {
 const getPostDetail = async (postId: number): Promise<PostDetail> => {
   try {
     const response = await apiClient.get(`/posts/${postId}`);
-    // Construct full image URL
     if (response.data.image) {
       response.data.image = `${API_BASE_URL}/${response.data.image}`;
     }
@@ -207,4 +201,3 @@ const apiService = {
 };
 
 export default apiService;
-    
