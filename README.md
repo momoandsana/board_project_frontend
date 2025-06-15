@@ -1,19 +1,19 @@
 # Board Project Frontend
 
-## 개요
-React + Vite + TypeScript + Tailwind CSS 기반 커뮤니티 게시판 프론트엔드입니다.  
-백엔드 API와 연동해 게시글·댓글 CRUD, 인증, 관리자 기능을 제공합니다.
+## Overview
+This is a community board frontend built with React + Vite + TypeScript + Tailwind CSS.  
+It integrates with a backend API to provide CRUD operations for posts and comments, authentication, and admin features.
 
-## 주요 기능
-- 회원가입 / 로그인 / 로그아웃  
-- 게시글 생성·조회·수정·삭제  
-- 댓글 작성·삭제  
-- 이미지 업로드 (JPG/PNG/GIF, 최대 5MB)  
-- 관리자 페이지: 사용자 목록 조회·삭제  
-- Protected Route 적용  
-- 토스트 알림  
+## Key Features
+- Sign up / Log in / Log out  
+- Create, Read, Update, Delete posts  
+- Write and delete comments  
+- Image upload (JPG/PNG/GIF, up to 5MB)  
+- Admin page: view and delete users  
+- Protected Routes  
+- Toast notifications  
 
-## 기술 스택
+## Tech Stack
 - React 18  
 - TypeScript  
 - Vite  
@@ -21,60 +21,60 @@ React + Vite + TypeScript + Tailwind CSS 기반 커뮤니티 게시판 프론트
 - React Router v7  
 - Axios  
 - Context API  
-- 커스텀 Hook(`useAuth`)  
+- Custom Hook (`useAuth`)  
 
-## 설치 및 실행
+## Installation & Running
 ```bash
-git clone https://github.com/사용자명/리포지토리명.git
+git clone https://github.com/your-username/your-repo.git
 cd board_project_frontend-main
 npm install
 ```
 
-### 환경 설정
-`src/constants.ts` 파일에서 `API_BASE_URL`을 실제 백엔드 주소로 변경하세요.
+### Configuration
+In `src/constants.ts`, change `API_BASE_URL` to your actual backend URL:
 
 ```ts
 export const API_BASE_URL = "https://your-backend-domain";
 ```
 
-### 개발 서버 실행
+### Start Development Server
 ```bash
 npm run dev
 ```
 
-### 빌드
+### Build
 ```bash
 npm run build
 ```
 
-### 빌드 결과 미리보기
+### Preview Build
 ```bash
 npm run preview
 ```
 
-## 프로젝트 구조
+## Project Structure
 ```
 board_project_frontend-main/
 ├ public/
 │  └ index.html
 ├ src/
-│  ├ components/       # 공통 컴포넌트
-│  ├ pages/            # 라우트 페이지
+│  ├ components/       # Shared components
+│  ├ pages/            # Route pages
 │  ├ contexts/         # AuthContext
-│  ├ hooks/            # 커스텀 Hook
-│  ├ services/         # API 호출 모듈
-│  ├ types.ts          # 공용 타입 정의
-│  └ App.tsx           # 라우터 설정
-├ src/constants.ts     # API 주소 설정
+│  ├ hooks/            # Custom hooks
+│  ├ services/         # API modules
+│  ├ types.ts          # Shared type definitions
+│  └ App.tsx           # Router setup
+├ src/constants.ts     # API base URL
 ├ vite.config.ts
 └ package.json
 ```
 
-## 기여 방법
+## Contributing
 1. Fork  
-2. 브랜치 생성: `git checkout -b feature/기능명`  
-3. 커밋: `git commit -m "feat: 설명"`  
-4. PR 생성 및 리뷰 요청  
+2. Create a branch: `git checkout -b feature/your-feature`  
+3. Commit: `git commit -m "feat: description"`  
+4. Open a PR and request a review  
 
-## 라이선스
+## License
 MIT License
