@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="text-2xl font-bold text-white hover:text-neutral-300 transition-colors">
-              CommunityHub
+              My Page
             </Link>
             <div className="hidden md:block ml-10">
               <div className="flex items-baseline space-x-4">

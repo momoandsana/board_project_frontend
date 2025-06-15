@@ -10,12 +10,11 @@ const HomePage: React.FC = () => {
   return (
     <div className="text-center py-10 px-4 bg-neutral-800 rounded-xl shadow-2xl border border-neutral-700">
       <h1 className="text-4xl sm:text-5xl font-extrabold text-neutral-100 mb-6">
-        Welcome to <span className="text-white">Community</span>
-        <span className="text-neutral-300">Hub</span>!
+        Welcome to <span className="text-white">My</span>
+        <span className="text-neutral-300">Page</span>!
       </h1>
       <p className="text-lg text-neutral-300 mb-8 max-w-2xl mx-auto">
-        Your one-stop platform for discussions, announcements, and community engagement.
-        Explore our boards, share your thoughts, and connect with others.
+        This page was built with ChatGPT(backend) and Google AI Studio (frontend)
       </p>
 
       {user ? (
